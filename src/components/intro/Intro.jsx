@@ -1,6 +1,5 @@
 import "./intro.scss";
 import Typewriter from "typewriter-effect";
-import { useEffect, useRef } from "react";
 
 export default function Intro() {
   return (
@@ -21,7 +20,7 @@ export default function Intro() {
                 options={{
                   strings: ["Developer", "Designer", "Engineer"],
                   autoStart: true,
-                  cursor: "",
+                  cursor: "🍻",
                   delay: 75,
                   loop: true,
                 }}
