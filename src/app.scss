@@ -1,0 +1,27 @@
+.app {
+  height: 100vh;
+
+  .sections {
+    width: 100%;
+    // so that the content does not overflow,
+    // as the height of top bar is already fixed to 70px
+    height: calc(100vh - 70px);
+    background-color: lightsalmon;
+    position: relative;
+    top: 70px;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory; //to enable snap scroll
+    scrollbar-width: none; //for firefox
+    &::-webkit-scrollbar {
+      //for rest to make scrollbar dissapear
+      display: none;
+    }
+
+    //for each element inside sections
+    > * {
+      width: 100vw;
+      height: calc(100vh - 70px);
+      scroll-snap-align: start;
+    }
+  }
+}
